@@ -1,0 +1,75 @@
+
+{
+    "info": {
+        "id": "65797",
+        "name": "Leon's - Burgers & Wings (Leon Grill)",
+        "cloudinaryImageId": "b2edbc28b7b8219d6e0a9c049ce06658",
+        "locality": "Koramangala",
+        "areaName": "Koramangala",
+        "costForTwo": "₹300 for two",
+        "cuisines": [
+            "American",
+            "Snacks",
+            "Turkish",
+            "Portuguese",
+            "Continental"
+        ],
+        "avgRating": 4.4,
+        "parentId": "371281",
+        "avgRatingString": "4.4",
+        "totalRatingsString": "10K+",
+        "sla": {
+            "deliveryTime": 19,
+            "lastMileTravel": 1.4,
+            "serviceability": "SERVICEABLE",
+            "slaString": "15-20 mins",
+            "lastMileTravelString": "1.4 km",
+            "iconType": "ICON_TYPE_EMPTY"
+        },
+        "availability": {
+            "nextCloseTime": "2024-01-31 04:00:00",
+            "opened": true
+        },
+        "badges": {},
+        "isOpen": true,
+        "type": "F",
+        "badgesV2": {
+            "entityBadges": {
+                "imageBased": {},
+                "textBased": {},
+                "textExtendedBadges": {}
+            }
+        },
+        "aggregatedDiscountInfoV3": {
+            "header": "₹100 OFF",
+            "subHeader": "ABOVE ₹199",
+            "discountTag": "FLAT DEAL"
+        },
+        "orderabilityCommunication": {
+            "title": {},
+            "subTitle": {},
+            "message": {},
+            "customIcon": {}
+        },
+        "differentiatedUi": {
+            "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+            "differentiatedUiMediaDetails": {
+                "mediaType": "ADS_MEDIA_ENUM_IMAGE",
+                "lottie": {},
+                "video": {}
+            }
+        },
+        "reviewsSummary": {},
+        "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+        "restaurantOfferPresentationInfo": {}
+    },
+    "analytics": {
+        "context": "seo-data-510020de-47b1-4e6a-b7a5-09ba9b13203b"
+    },
+    "cta": {
+        "link": "https://www.swiggy.com/restaurants/leons-burgers-and-wings-leon-grill-koramangala-bangalore-65797",
+        "text": "RESTAURANT_MENU",
+        "type": "WEBLINK"
+    },
+    "widgetId": "collectionV5RestaurantListWidget_SimRestoRelevance_food_seo"
+}

@@ -1,0 +1,47 @@
+{
+  "name": "namaste-react",
+  "version": "1.0.0",
+  "description": "This is a Namaste React Project",
+  "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build index.html",
+    "test": "jest",
+    "watch-test": "jest --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aagam342/Namaste_React.git"
+  },
+  "keywords": [],
+  "author": "Aagam",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/aagam342/Namaste_React/issues"
+  },
+  "homepage": "https://github.com/aagam342/Namaste_React#readme",
+  "devDependencies": {
+    "@babel/core": "^7.23.9",
+    "@babel/preset-env": "^7.23.9",
+    "@babel/preset-react": "^7.23.3",
+    "@testing-library/jest-dom": "^6.4.0",
+    "babel-jest": "^29.7.0",
+    "jest": "^29.7.0",
+    "parcel": "^2.10.3",
+    "postcss": "^8.4.32",
+    "process": "^0.11.10",
+    "tailwindcss": "^3.4.0"
+  },
+  "dependencies": {
+    "@reduxjs/toolkit": "^2.1.0",
+    "@testing-library/react": "^14.1.2",
+    "cors": "^2.8.5",
+    "jest-environment-jsdom": "^29.7.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-redux": "^9.1.0",
+    "react-router-dom": "^6.21.1"
+  },
+  "browserslist": [
+    "last 2 versions"
+  ]
+}
