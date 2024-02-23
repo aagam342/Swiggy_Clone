@@ -3,12 +3,11 @@ const RestaurantCard = (props) => {
   const { resData } = props;
   const { name, cuisines, costForTwo, avgRating, areaName } = resData?.info;
 
-  console.log(resData);
 
   return (
     <div
       data-testid="resCard"
-      className=" m-2 w-52 h-[250] rounded-lg  hover:bg-gray-100 transform transition-transform duration-500 ease-in-out "
+      className=" m-2 w-52 h-[250] rounded-lg hover:bg-gray-100 "
     >
       <img
         src={CDN_URL + resData.info.cloudinaryImageId}

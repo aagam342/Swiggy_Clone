@@ -13,13 +13,7 @@ const useRestaurantlist = () => {
   const fetchData = async () => {
     const data = await fetch(corsProxyUrl + swiggyApiUrl);
 
-    // const data = await fetch(corsProxyUrl + swiggyApiUrl, {
-    //   method: "GET", // Change this to "GET" if it's a GET request
-    //   headers: {
-    //     "Content-Type": "application/json",
-    //   },
-    //   mode: "cors",
-    // });
+
 
     const json = await data.json();
     setListOfRestaurants(

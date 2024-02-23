@@ -95,7 +95,7 @@ const Body = () => {
           <Link
             to={"/restaurants/" + restaurant.info.id}
             key={restaurant.info.id}
-            className="mx-5 hover:scale-95 my-2"
+            className="mx-5 hover:scale-95 my-2  transform transition-transform duration-500 ease-out"
           >
             {restaurant.info.isOpen ? (
               <RestaurantCardOpen resData={restaurant} />
