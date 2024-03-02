@@ -30,14 +30,16 @@ const Body = () => {
   const { loggedInUser, setUserName } = useContext(UserContext);
   return error ? (
     // Render an error message
-    <div className="error-message bg-red-500 text-white p-10 mt-32 mx-20 rounded-lg shadow-md flex flex-col items-center">
-      <p className="mb-2">
-        Error fetching data: {error}. Please make sure you have the UltraSurf
-        Security & Privacy Extension enabled while using this app, as it
-        utilizes Swiggy's live API for development purposes only.
+    <div className="error-message shadow-orange-300 shadow-lg bg-red-500 text-white p-10 mt-32 mx-20 rounded-lg shadow-md flex flex-col items-center font-serif">
+      <p className="mb-2">{error}.</p>
+      <p className="mb-2 text-2xl ">
+        Please make sure you have the UltraSurf Security & Privacy Extension
+        enabled while using this app, as it utilizes Swiggy's live API for
+        development purposes only.
       </p>
+
       <button
-        className="bg-white text-red-500 px-4 py-2 rounded-md hover:bg-red-100"
+        className="bg-white hover:scale-105 text-red-500 px-4 py-2 rounded-md hover:bg-red-100"
         onClick={() =>
           window.open(
             "https://chromewebstore.google.com/detail/ultrasurf-security-privac/mjnbclmflcpookeapghfhapeffmpodij",
