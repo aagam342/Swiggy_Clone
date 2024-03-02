@@ -6,28 +6,36 @@ import { useState } from "react";
 
 const RestaurantMenu = () => {
   const { resId } = useParams();
-  const resInfo = useRestaurantMenu(resId);
+  const { resInfo, error } = useRestaurantMenu(resId);
   const [showIndex, setShowIndex] = useState(-1);
 
-  if (resInfo === null) return <Shimmer />;
+  if (error) {
+    return (
+      <div className="error-message bg-red-500 text-white p-4 rounded-lg shadow-md text-center my-6">
+        <p>Error fetching menu: {error}</p>
+      </div>
+    );
+  }
 
+  if (resInfo === null) return <Shimmer />;
+  console.log(resInfo);
   const { name, cuisines, costForTwoMessage } =
-    resInfo?.cards[2]?.card?.card?.info;
+    resInfo?.cards[0]?.card?.card?.info;
 
   const { itemCards } =
-    resInfo?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards[2]?.card?.card;
+    resInfo?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards[2]?.card?.card;
 
   const categories =
-    resInfo?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards.filter(
+    resInfo?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards.filter(
       (c) =>
         c.card?.card?.["@type"] ==
         "type.googleapis.com/swiggy.presentation.food.v2.ItemCategory"
     );
 
   return (
-    <div className="menu text-center  my-6 ">
+    <div className="menu text-center my-6">
       <h1 className="text-2xl font-bold ">{name}</h1>
-      <p className="text-center font-bold my-2 ">
+      <p className="text-center font-bold my-2">
         {cuisines.join(", ")} - {costForTwoMessage}
       </p>
       <div className="w-[60%] mx-auto">
@@ -35,9 +43,9 @@ const RestaurantMenu = () => {
           <RestaurantCategory
             key={category.card.card.title}
             data={category.card.card}
-            showItems={index == showIndex ? true : false}
+            showItems={index === showIndex}
             setShowIndex={() => {
-              if (showIndex == index) {
+              if (showIndex === index) {
                 setShowIndex(-1);
               } else {
                 setShowIndex(index);
@@ -49,4 +57,5 @@ const RestaurantMenu = () => {
     </div>
   );
 };
+
 export default RestaurantMenu;

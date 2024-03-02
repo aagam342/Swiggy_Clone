@@ -14,6 +14,7 @@ const Body = () => {
     setListOfRestaurants,
     filteredRestaurants,
     setFilteredRestaurants,
+    error,
   ] = useRestaurantlist();
 
   const RestaurantCardOpen = withOpenLabel(RestaurantCard);
@@ -27,7 +28,28 @@ const Body = () => {
     );
   }
   const { loggedInUser, setUserName } = useContext(UserContext);
-  return listOfRestaurants.length == 0 ? (
+  return error ? (
+    // Render an error message
+    <div className="error-message bg-red-500 text-white p-10 mt-32 mx-20 rounded-lg shadow-md flex flex-col items-center">
+      <p className="mb-2">
+        Error fetching data: {error}. Please make sure you have the UltraSurf
+        Security & Privacy Extension enabled while using this app, as it
+        utilizes Swiggy's live API for development purposes only.
+      </p>
+      <button
+        className="bg-white text-red-500 px-4 py-2 rounded-md hover:bg-red-100"
+        onClick={() =>
+          window.open(
+            "https://chromewebstore.google.com/detail/ultrasurf-security-privac/mjnbclmflcpookeapghfhapeffmpodij",
+            "_blank"
+          )
+        }
+      >
+        Enable UltraSurf Extension
+      </button>
+    </div>
+  ) : listOfRestaurants.length === 0 ? (
+    // Render a loading indicator (e.g., Shimmer) when data is still being fetched
     <Shimmer />
   ) : (
     <div className="body w-[90%] mx-auto ">
