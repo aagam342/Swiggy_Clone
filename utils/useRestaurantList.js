@@ -16,10 +16,10 @@ const useRestaurantlist = () => {
     try {
       const data = await fetch(corsProxyUrl + swiggyApiUrl);
       const json = await data.json();
-
+      console.log(json);
       if (json && json.data && json.data.cards) {
         const restaurants =
-          json.data.cards[1]?.card.card.gridElements?.infoWithStyle
+          json.data.cards[2]?.card.card.gridElements?.infoWithStyle
             ?.restaurants;
 
         if (restaurants) {
@@ -33,6 +33,7 @@ const useRestaurantlist = () => {
       }
     } catch (error) {
       setError("Error fetching data: " + error.message);
+      console.log(error);
     }
   };
 
